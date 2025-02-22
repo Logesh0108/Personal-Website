@@ -1,0 +1,1863 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logesh Nalliyappan | Software Developer</title>
+
+    <link rel="icon" type="image/png" href="src/resume.png">
+    <meta name="theme-color" content="#06c1db  " id="meta-theme-color">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <style>
+        ::selection {
+            background-color: #fec544;
+            /* Set background color to black */
+            color: white;
+            /* Optional: Set text color to white for better visibility */
+            font-weight: bolder;
+            border-radius: 20px;
+
+        }
+
+        /* For Mozilla Firefox compatibility */
+        ::-moz-selection {
+            background-color: #fec544;
+            color: white;
+            border-radius: 20px;
+            font-weight: bolder;
+
+
+        }
+
+        body {
+            background-color: #040b14;
+        }
+
+        /* Navbar Base Styles */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1030;
+            background-color: #040b14;
+            /* Dark background for better visibility */
+            box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+        }
+
+        /* Navbar Brand */
+        .navbar-brand {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ff8800;
+            letter-spacing: 2px;
+            transition: font-size 0.3s ease, letter-spacing 0.3s ease, color 0.3s ease;
+        }
+
+        .navbar-brand:hover {
+            color: #f8c146;
+        }
+
+        /* Navbar Links */
+        .nav-link {
+            font-size: 18px;
+            margin-right: 15px;
+            transition: color 0.3s ease;
+            color: white !important;
+        }
+
+        .nav-link.active {
+            font-weight: bold;
+        }
+
+        .nav-link.active:hover {
+            color: #f8c146 !important;
+            transition: font-size 0.3s ease, letter-spacing 0.3s ease, color 0.3s ease;
+        }
+
+        /* Mobile View - Navbar Toggle Icon */
+        .navbar-toggler {
+            border: none;
+            color: white !important;
+            background: transparent;
+        }
+
+        .navbar-toggler:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        @media (max-width: 576px) {
+            .navbar {
+                padding: 6px 10px;
+            }
+
+            .navbar-brand {
+                font-size: 1.2rem;
+                letter-spacing: 1px;
+            }
+
+            .nav-link {
+                font-size: 16px;
+                padding: 8px;
+                display: block;
+            }
+
+            .navbar-nav {
+                text-align: center;
+            }
+        }
+
+        /* Ultra Small Screens (200px+) */
+        @media (max-width: 300px) {
+            .navbar {
+                padding: 4px 5px;
+            }
+
+            .navbar-brand {
+                font-size: 1rem;
+                letter-spacing: 0.5px;
+            }
+
+            .nav-link {
+                font-size: 14px;
+                padding: 5px;
+            }
+        }
+
+        /* Navbar Toggler Icon */
+        .navbar-toggler {
+            border: none;
+            background: transparent;
+            color: aliceblue !important;
+        }
+
+        /* Change the color of the default Bootstrap toggler icon */
+        .navbar-toggler-icon {
+            filter: invert(100%);
+            /* Makes it white */
+        }
+
+        /* OR Use a background image for more control */
+        .navbar-toggler-icon {
+            background-image: url("src/burger-menu.png");
+        }
+
+        /* Remove outline on focus */
+        .navbar-toggler:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+
+        /* background and social icons */
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 92vh;
+            /* Full screen height */
+            background: url('./src/Profile.jpeg') center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Dark Semi-Transparent Overlay */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.88);
+            /* 70% Dark Overlay */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Text Content */
+        .text-content {
+            position: relative;
+            z-index: 2;
+            /* Keeps text above the overlay */
+            max-width: 80%;
+            color: white;
+        }
+
+        .text-content h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* Highlighted Name */
+        .highlight-name {
+            color: #ff8800;
+            /* Highlight Color */
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .text-content p {
+            font-size: 1.5rem;
+            line-height: 1.6;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Fade-in Animation */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .text-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .text-content p {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .image-container {
+                height: 80vh;
+                /* Reduce height for smaller screens */
+            }
+
+            .text-content {
+                max-width: 90%;
+            }
+
+            .text-content h1 {
+                font-size: 2rem;
+            }
+
+            .text-content p {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .image-container {
+                height: 70vh;
+            }
+
+            .text-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .text-content p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Social Media Section */
+        .social-media-section {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .nav-social-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            text-decoration: none;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .nav-social-icon i {
+            font-size: 2.5rem;
+            background-color: #f1f1f1;
+            border-radius: 50%;
+            padding: 15px;
+            transition: all 0.4s ease-in-out;
+        }
+
+        .nav-social-icon:hover {
+            transform: scale(1.2);
+        }
+
+        .nav-social-icon:hover i {
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .platform-name {
+            font-size: 1rem;
+            color: #fff;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease-in-out;
+            margin-top: 5px;
+        }
+
+        .nav-social-icon:hover .platform-name {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .whatsapp i {
+            color: #25D366;
+        }
+
+        .instagram i {
+            color: #E1306C;
+        }
+
+        .linkedin i {
+            color: #0A66C2;
+        }
+
+        .github i {
+            color: #171515;
+        }
+
+        .gmail i {
+            color: #D44638;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .image-container {
+                height: 80vh;
+            }
+
+            .text-content {
+                max-width: 90%;
+            }
+
+            .social-media-section {
+                gap: 20px;
+            }
+
+            .nav-social-icon i {
+                font-size: 2rem;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .image-container {
+                height: 70vh;
+            }
+
+            .social-media-section {
+                gap: 15px;
+            }
+
+            .nav-social-icon i {
+                font-size: 1.8rem;
+            }
+
+            .platform-name {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Button Container */
+        :root {
+            --primary-color: #ff8800;
+            --border-color: #ff8800;
+            --text-color: white;
+        }
+
+        .download-container {
+            position: relative;
+        }
+
+        /* Download Button */
+        .download-btn {
+            position: relative;
+            display: inline-block;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--text-color);
+            text-transform: uppercase;
+            padding: 15px 40px;
+            cursor: pointer;
+            border: 3px solid var(--border-color);
+            background: transparent;
+            overflow: hidden;
+            transition: all 0.4s ease-in-out;
+            letter-spacing: 1px;
+            margin-top: 15px;
+            border-radius: 15px;
+        }
+
+        /* Sliding Border Animation */
+        .download-btn::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: -100%;
+            background: var(--primary-color);
+            transition: all 0.4s ease-in-out;
+            z-index: -1;
+        }
+
+        .download-btn:hover::before {
+            left: 0;
+        }
+
+        /* Ripple Effect */
+        .ripple {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.5);
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: ripple 0.6s linear;
+        }
+
+        @keyframes ripple {
+            0% {
+                width: 0;
+                height: 0;
+                opacity: 0.6;
+            }
+
+            100% {
+                width: 200px;
+                height: 200px;
+                opacity: 0;
+            }
+        }
+        @media screen and (max-width: 768px) {
+    .download-container {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .download-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+        width: 80%;
+        max-width: 250px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .download-btn {
+        font-size: 12px;
+        padding: 8px 16px;
+        width: 90%;
+        max-width: 200px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .download-btn {
+        font-size: 10px;
+        padding: 6px 12px;
+        width: 95%;
+        max-width: 180px;
+    }
+}
+
+@media screen and (max-width: 200px) {
+    .download-btn {
+        font-size: 8px;
+        padding: 4px 10px;
+        width: 100%;
+        max-width: 160px;
+    }
+}
+
+
+
+        /*Aboutme styles*/
+
+
+        #aboutme {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #040b14;
+        }
+
+        #aboutme h2 {
+            font-size: 2rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-top: 20px;
+            color: #fff;
+        }
+
+        .Profile {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .Profile img {
+            width: 100%;
+            max-width: 355px;
+            height: auto;
+            border-radius: 15px;
+            object-fit: cover;
+            transition: transform 0.1s ease-out;
+            box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.1);
+        }
+
+        .Description {
+            max-width: 500px;
+            text-align: left;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #111;
+        }
+
+        .Description h1 {
+            font-size: 2rem;
+            color: #ffcc00;
+            margin-bottom: 15px;
+        }
+
+        .Description .info span {
+            color: white;
+        }
+
+        .Description:hover {
+            box-shadow: 0 4px 12px rgba(241, 241, 241, 0.5);
+            transform: scale(1.01);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .Description p {
+            font-size: 1rem;
+            color: #bbb;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .info p {
+            margin: 5px 0;
+            font-size: 1rem;
+            color: #fff;
+        }
+
+        .info strong {
+            color: #ffcc00;
+        }
+
+        @media (max-width: 768px) {
+            .Profile {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        @media screen and (max-width: 768px) {
+    .Description {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .Description h1 {
+        font-size: 24px;
+    }
+
+    .Description p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info p {
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .Description h1 {
+        font-size: 20px;
+    }
+
+    .Description p {
+        font-size: 12px;
+    }
+
+    .info p {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .Description {
+        padding: 5px;
+    }
+
+    .Description h1 {
+        font-size: 18px;
+    }
+
+    .Description p {
+        font-size: 10px;
+    }
+
+    .info p {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 200px) {
+    .Description h1 {
+        font-size: 16px;
+    }
+
+    .Description p {
+        font-size: 9px;
+    }
+
+    .info p {
+        font-size: 8px;
+    }
+}
+/*project*/
+
+.projects {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .projects h2 {
+            font-size: 2rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-top: 30px;
+            color: #fff;
+        }
+        .projects-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .project-card {
+            position: relative;
+            width: 100%;
+            max-width: 300px;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+        .project-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .projectoverlay {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f8c146;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: px;
+    text-align: center;
+    transition: bottom 0.3s ease-in-out;
+}
+
+.project-card:hover .projectoverlay {
+    bottom: 0;
+}
+
+.projectoverlay h3{
+    color: #1c4500;
+    font-weight: bolder;
+    margin: 5px 0;
+    font-size: 1.5rem;
+}
+
+.projectoverlay p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.icons a {
+    color: rgb(255, 255, 240);
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.icons a:hover {
+    transform: scale(1.2);
+}
+
+        @media (max-width: 600px) {
+            .projects-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .project-card {
+                width: 90%;
+                max-width: 300px;
+                height: 200px;
+            }
+        }
+
+/*skill styles */
+
+.skill {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+#skill h2 {
+    font-size: 2rem;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 60px;
+           
+}
+
+.skill-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 items per row */
+    grid-template-rows: repeat(2, auto); /* Two rows */
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.skill-item {
+    background: #222;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item img {
+    width: 40px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.skill-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    background: #333;
+}
+.skill-text:hover {
+color: #f8c146;
+}
+
+.skill-text {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Responsive Design for Different Devices */
+@media (max-width: 1024px) {
+    .skill-container {
+        grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .skill-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+        gap: 15px;
+    }
+    .skill-item img {
+        width: 50px;
+        height: 50px;
+    }
+    .skill-text {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .skill-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+    }
+    .skill-item img {
+        width: 45px;
+        height: 45px;
+    }
+    .skill-text {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .skill-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .skill-item img {
+        width: 40px;
+        height: 40px;
+    }
+    .skill-text {
+        font-size: 0.8rem;
+    }
+}
+
+/*Tmelne secton*/
+.resume{
+    font-size: 2rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-top: 30px !important;
+            color: #fff;
+}
+.timeline_area {
+    position: relative;
+    z-index: 1;
+}
+.single-timeline-area{
+    color: #ffffff;
+}
+.single-timeline-area {
+    position: relative;
+    z-index: 1;
+    padding-left: 180px;
+}
+@media only screen and (max-width: 575px) {
+    .single-timeline-area {
+        padding-left: 100px;
+    }
+}
+.single-timeline-area .timeline-date {
+    position: absolute;
+    width: 180px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    padding-right: 60px;
+}
+@media only screen and (max-width: 575px) {
+    .single-timeline-area .timeline-date {
+        width: 100px;
+    }
+}
+.single-timeline-area h4{
+color: #ff8800;
+}
+.single-timeline-area .timeline-date::after {
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    content: "";
+    background-color: #ebebeb;
+    top: 0;
+    right: 30px;
+    z-index: 1;
+}
+.single-timeline-area .timeline-date::before {
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: #f1c40f;
+    content: "";
+    top: 50%;
+    right: 26px;
+    z-index: 5;
+    margin-top: -5.5px;
+}
+.single-timeline-area .timeline-date p {
+    margin-bottom: 0;
+    color: #ffffff;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.single-timeline-area .single-timeline-content {
+    position: relative;
+    z-index: 1;
+    padding: 30px 30px 25px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    -webkit-box-shadow: 0 0.25rem 1rem 0 rgba(251, 251, 251, 0.125);
+    box-shadow: 0 0.25rem 1rem 0 rgba(255, 255, 255, 0.125);
+    border: 1px solid #ebebeb;
+}
+@media only screen and (max-width: 575px) {
+    .single-timeline-area .single-timeline-content {
+        padding: 20px;
+    }
+}
+.single-timeline-area .single-timeline-content .timeline-icon {
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    width: 30px;
+    height: 30px;
+    background-color: #ffffff;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 30px;
+    flex: 0 0 30px;
+    text-align: center;
+    max-width: 30px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.single-timeline-area .single-timeline-content .timeline-icon i {
+    color: #000000;
+    line-height: 30px;
+}
+.single-timeline-area .single-timeline-content .timeline-text h6 {
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+}
+.single-timeline-area .single-timeline-content .timeline-text p {
+    font-size: 13px;
+    margin-bottom: 0;
+}
+.single-timeline-area .single-timeline-content:hover .timeline-icon,
+.single-timeline-area .single-timeline-content:focus .timeline-icon {
+    background-color: #f1c40f;
+}
+.single-timeline-area .single-timeline-content:hover .timeline-text h6,
+.single-timeline-area .single-timeline-content:focus .timeline-text h6 {
+    color: #f1c40f;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Highlight the section when it's reached */
+#resume {
+  scroll-margin-top: 100px; /* Adjust based on navbar height */
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+/* Contact styles*/
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.contact-container {
+    display: flex;
+    gap: 40px;
+    max-width: 1100px;
+    width: 90%;
+    background: #ffffff00;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+/* Form Styles */
+form {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #cdcdcd;
+    border-left: 4px solid #fec544;
+    padding-left: 10px;
+    text-transform: uppercase;
+}
+
+label {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #040b14;
+    transition: border-color 0.3s;
+    color: white;
+    font-weight: 900;
+}
+
+input:focus, textarea:focus {
+    border-color: #fec544;
+    outline: none;
+}
+
+textarea {
+    min-height: 120px;
+}
+
+button {
+    background-color: #fec544;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background-color: #fec544;
+    box-shadow: 0 0 10px rgb(106, 105, 107);
+}
+
+/* Contact Info Styles */
+.contact-info-address {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+    padding-left: 20px;
+    border-left: 2px solid #ddd;
+}
+
+.footer-contact-address, .footer-social-media {
+    background: #040b14;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer-contact-address h5, .footer-social-media h5 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #fec544;
+    border-bottom: 2px solid #ffffff;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer-contact-address p {
+    font-size: 1.2rem;
+    color: #cdcdcd;
+    margin: 5px 0;
+    font-weight: bolder;
+}
+
+.footer-contact-address p i {
+    margin-right: 10px;
+    color: #fec544;
+}
+.footer-contact-address i:hover {
+    background: #ffffff;
+    color: #fec544; /* Add a color change for the icon */
+    border-radius: 50%; /* Add rounded effect */
+    padding: 5px; /* Add a slight padding */
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.7), 0 0 15px rgba(254, 197, 68, 0.5); /* Add green glow */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Social Media */
+.footer-social-media {
+    text-align: left;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    background: #fec544;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.social-icon:hover {
+    background: #f4c850;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    background-color: #040b14;
+    font-size: 1.1rem;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+footer .developer {
+    font-weight: bold;
+    color: #fec544;
+    transition: text-shadow 0.3s;
+}
+
+footer .developer:hover {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
+    
+}
+@media (max-width: 200px) {
+    main {
+        padding: 5px;
+    }
+
+    .contact-container {
+        padding: 8px;
+        gap: 10px;
+    }
+
+    form h2 {
+        font-size: 1.2rem;
+    }
+
+    input, textarea {
+        font-size: 0.75rem;
+        padding: 6px;
+    }
+
+    button {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+
+    .footer-contact-address p {
+        font-size: 1rem;
+    }
+
+    .social-icon {
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    form, .contact-info-address {
+        flex: 1 1 100%;
+        text-align: left;
+    }
+
+    .social-icons {
+        justify-content: flex-start;
+    }
+}
+/* Default styles (already assumed to be present) */
+
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
+    .footer-contact-address {
+        text-align: left;
+    }
+    .footer-contact-address p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer-contact-address {
+        text-align: left;
+        padding: 10px;
+    }
+    .footer-contact-address h5 {
+        font-size: 18px;
+    }
+    .footer-contact-address p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer-contact-address {
+        text-align: left;
+        padding: 5px;
+    }
+    .footer-contact-address h5 {
+        font-size: 16px;
+    }
+    .footer-contact-address p {
+        font-size: 12px;
+    }
+}
+/* Default styles (already assumed to be present) */
+
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
+    .footer-contact-address, .footer-social-media {
+        text-align: center;
+    }
+    .footer-contact-address p, .footer-social-media .social-icon {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer-contact-address, .footer-social-media {
+        padding: 10px;
+    }
+    .footer-contact-address h5, .footer-social-media h5 {
+        font-size: 18px;
+    }
+    .footer-contact-address p, .footer-social-media .social-icon {
+        font-size: 14px;
+    }
+    .footer-social-media .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer-contact-address, .footer-social-media {
+        padding: 5px;
+    }
+    .footer-contact-address h5, .footer-social-media h5 {
+        font-size: 16px;
+    }
+    .footer-contact-address p, .footer-social-media .social-icon {
+        font-size: 12px;
+    }
+    .footer-social-media .social-icons {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+}
+#contact-form{
+    font-size: 2rem;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 60px ;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        background-color: #ffffff;
+        color: #000000;
+        border-radius: 50%;
+       
+        cursor: pointer;
+        transition: transform 0.6s linear, background-color 0.3s ease-in-out;
+        z-index: 1000;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Icon Inside the Button (Always Visible) */
+    #back-to-top .icon {
+        font-size: 1.5rem;
+        transition: color 0.3s ease-in-out;
+    }
+
+    /* Hover Effect - Rotate Background */
+    #back-to-top:hover {
+        transform: rotate(360deg); /* Rotate the entire button */
+        background-color: #f1c40f; /* Change color while rotating */
+        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.367);
+        color: #000000;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Logesh Nalliyappan</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0" style="--bs-scroll-height: 220px;">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#aboutme">About</a>
+                    </li>
+                   
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#projects">Projects</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#skill">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#resume">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#contact-form">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home -->
+    <div class="image-container">
+        <div class="overlay">
+            <div class="text-content">
+                <h1>Hello, I am <span class="highlight-name">Logesh Nalliyappan</span></h1>
+                <p>Software Engineer | Network Engineer | Web Developer | Proficient in Java & SQL | Passionate about
+                    Cybersecurity & Automation</p>
+                <div class="social-media-section">
+                    <a href="https://wa.me/7339055427?text=Hi" target="_blank" class="nav-social-icon whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                        <span class="platform-name">WhatsApp</span>
+                    </a>
+                    <a href="https://www.instagram.com/logesh_sk_0108?igsh=MW82NTh0NGF2MzR4Yw==" target="_blank"
+                        class="nav-social-icon instagram">
+                        <i class="fab fa-instagram"></i>
+                        <span class="platform-name">Instagram</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/logesh-n-72531b285/" target="_blank"
+                        class="nav-social-icon linkedin">
+                        <i class="fab fa-linkedin"></i>
+                        <span class="platform-name">LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/Logesh0108" target="_blank" class="nav-social-icon github">
+                        <i class="fab fa-github"></i>
+                        <span class="platform-name">GitHub</span>
+                    </a>
+                    <a href="mailto:logeshnalliyappan@gmail.com" class="nav-social-icon gmail" target="_blank">
+                        <i class="fas fa-envelope"></i>
+                        <span class="platform-name">Gmail</span>
+                    </a>
+                </div>
+                <div class="download-container">
+                    <button class="download-btn" onclick="downloadResume(event)">Download CV</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Aboutme -->
+<div id="aboutme"><br>
+
+    <div class="aboutme">
+        <h2>ABOUT ME</h2>
+        <div class="Profile">
+            <!-- Left Side: Image -->
+            <img src="src/Profile.jpg" alt="Profile Image" id="profile-img">
+
+            <!-- Right Side: Text Description -->
+            <div class="Description">
+                <h1>Hi There! I'm Logesh</h1>
+                <p>
+                    Passionate and dedicated IT professional with experience in network engineering and web development.
+                    Throughout my career, I’ve been actively involved in troubleshooting network and hardware issues,
+                    designing automated workflows, and improving business processes through innovative technologies.
+                </p>
+                <div class="info">
+                    <p><strong>Date of Birth :</strong> <span>&nbsp;August 1, 2002</span></p>
+                    <p><strong>Phone :</strong> <span>&nbsp;+91 7339055427</span></p>
+                    <p><strong>Email :</strong> <span>&nbsp;logeshnalliyappan@gmail.com</span></p>
+                    <p><strong>From :</strong> <span>&nbsp;Namakkal, Tamilnadu</span></p>
+                    <p><strong>Languages :</strong> <span>&nbsp;English, Tamil</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!--Projects-->
+
+    <section id="projects" class="projects">
+        <h2>My Projects</h2><br>
+        <br>
+        <div class="projects-container">
+            <div class="project-card">
+                <img src="./src/beyond words.jpg" alt="Project 1">
+                <div class="projectoverlay">
+                    <h3>BEYOND WORDS</h3>
+                    <p>Developed an AI-powered sign language translator, to enhance communication accessibility and promote inclusivity for individuals with hearing impairments.</p>
+                    <div class="icons">
+                        <a href="https://github.com/Logesh0108/" target="_blank"><i class="fas fa-link"></i></a>
+                        <a href="https://github.com/Logesh0108/" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="./src/generic_banner_Ind.png" alt="Project 2">
+                <div class="projectoverlay">
+                    <h3>BUS TICKET BOOKING SYSTEM</h3>
+                    <p>Created a bus tickect booking system and to check the availability of the seats available in the command line.</p>
+                    <div class="icons">
+                        <a title="Link" href="https://github.com/Logesh0108/Bus-Reservation-System" target="_blank"><i class="fas fa-link"></i></a>
+                        <a title="GitHub" href="https://github.com/Logesh0108/Bus-Reservation-System" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="./src/calculator.png" alt="Project 2">
+                <div class="projectoverlay">
+                    <h3>CALCULATE EVERYTHING</h3>
+                    <p>The Calculator App is a simple yet elegant, web-based application designed to perform arithmetic operations such as addition, subtraction, multiplication, and division.</p>
+                    <div class="icons">
+                        <a title="Link" href="https://logesh0108.github.io/Calculator/" target="_blank"><i class="fas fa-link"></i></a>
+                        <a title="GitHub" href="https://github.com/Logesh0108/Calculator" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="./src/image.png" alt="Project 2">
+                <div class="projectoverlay">
+                    <h3>SNAP NOTES</h3>
+                    <p>Developed the eNotes application using JSP, JDBC, HTML, CSS, and JavaScript, ensuring seamless user experiences.</p>
+                    <div class="icons">
+                        <a title="Link" href="https://github.com/Logesh0108/E-Notes-Application" target="_blank"><i class="fas fa-link"></i></a>
+                        <a title="GitHub" href="https://github.com/Logesh0108/E-Notes-Application" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="./src/Portfolio.jpeg" alt="Project 3">
+                <div class="projectoverlay">
+                    <h3>PERSONAL PORTOLIO</h3>
+                    <p>I created my personal website to highlight my skills, projects, and experiences while providing a platform to connect and share my work.</p>
+                    <div class="icons">
+                        <a title="Link" href="https://logesh0108.github.io/Portfolio/" target="_blank"><i class="fas fa-link"></i></a>
+                        <a title="GitHub" href="https://github.com/Logesh0108/Portfolio" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+<!-- Skills -->
+
+    <div class="skill mt-5"  id="skill">
+        <h2>MY SKILLS</h2>
+        <div class="skill-container">
+            <div class="skill-item">
+                <img src="src/java.png" alt="Java">
+                <p class="skill-text">JAVA</p>
+            </div>
+            <div class="skill-item">
+                <img src="src/html.png" alt="HTML">
+                <p class="skill-text">HTML</p>
+            </div>
+            <div class="skill-item">
+                <img src="src/css-3.png" alt="CSS">
+                <p class="skill-text">CSS</p>
+            </div>
+            <div class="skill-item">
+                <img src="src/js.png" alt="JavaScript">
+                <p class="skill-text">JavaScript</p>
+            </div>
+            <div class="skill-item">
+                <img src="src/php.png" alt="PHP">
+                <p class="skill-text">PHP</p>
+            </div>
+            <div class="skill-item">
+                <img src="src/mysql.png" alt="MySQL">
+                <p class="skill-text">MySQL</p>
+            </div>
+            <div class="skill-item">
+                <img src="src/computer.png" alt="Networking">
+                <p class="skill-text">Networking</p>
+            </div>
+            <div class="skill-item">
+                <img src="src/os.png" alt="Operating Systems">
+                <p class="skill-text">Operating Systems</p>
+            </div>
+            <div class="skill-item">
+                <img src="src/motherboard.png" alt="Hardware">
+                <p class="skill-text">Hardware & Troubleshooting</p>
+            </div>
+            <div class="skill-item">
+                <img src="src/office.png" alt="MS Office">
+                <p class="skill-text">MS Office</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Timeline -->
+     
+
+    <section class="timeline_area section_padding_130">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-8 col-lg-6">
+                    <!-- Section Heading-->
+                    <div class="section_heading text-center">
+                        <h2 id="resume" class="resume" >RESUME</h2>
+                        <div class="line"></div>
+                    </div> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <!-- Timeline Area-->
+                    <div class="apland-timeline-area">
+                        <!-- Single Timeline Content-->
+                      
+                        <div class="single-timeline-area">  <h4>EDUCATION</h4>
+                            <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                                <p>2020 - 2024</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-6 col-lg-12">
+                                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                        <div class="timeline-icon"><i class="fa fa-graduation-cap" aria-hidden="true"></i></div>
+                                        <div class="timeline-text">
+                                            <h6>B.Tech Artificial Intelligence and Data Science</h6>
+                                            <strong>KSRCT</strong>
+                                            <p><B>CGPA : 8.91</B></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                               
+                            </div>
+                        </div>
+                        <!-- Single Timeline Content-->
+                        <div class="single-timeline-area">
+                            <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                                <p>2019 - 2020</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-6 col-lg-12">
+                                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                        <div class="timeline-icon"><i class="fa fa-book" aria-hidden="true"></i></div>
+                                        <div class="timeline-text">
+                                          <h6>HSC</h6>
+                                          <strong>Sri Vidya Mandir Matric Hr Sec School</strong>
+                                          <p><B>Percentage : 73.5%</B></p>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                        <!-- Single Timeline Content-->
+                        <div class="single-timeline-area">
+                            <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                                <p>2018 - 2019</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-6 col-lg-12">
+                                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                        <div class="timeline-icon"><i class="fa fa-id-card" aria-hidden="true"></i></div>
+                                        <div class="timeline-text">
+                                          <h6>SSLC</h6>
+                                          <strong>Sri Vidya Mandir Matric Hr Sec School</strong>
+                                          <p><B>Percentage : 89.8%</B></p>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    
+    <section class="timeline_area section_padding_130">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-8 col-lg-6">
+                    <!-- Section Heading-->
+                    <div class="section_heading text-center">
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <!-- Timeline Area-->
+                    <div class="apland-timeline-area">
+                      
+                        <div class="single-timeline-area">  <h4>INTERNSHIPS</h4>
+                            <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                                <p>2024</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-6 col-lg-12">
+                                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                        <div class="timeline-icon"><i class="fa fa-graduation-cap" aria-hidden="true"></i></div>
+                                        <div class="timeline-text">
+                                            <h6>Network Engineer Intern-Trainee</h6>
+                                            <strong>Pallavaa Groups</strong>
+                                            <p>Utilized tools such as Microsoft Office Suite for documentation and reporting, Outlook for email configuration, Asset Management Tools for inventory tracking,
+                                                 OS Installation for system setup, and performed troubleshooting and networking device configuration to ensure optimal system performance.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                               
+                            </div>
+                        </div>
+                        <!-- Single Timeline Content-->
+                        <div class="single-timeline-area">
+                            <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                                <p>2023</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-6 col-lg-12">
+                                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                        <div class="timeline-icon"><i class="fa fa-book" aria-hidden="true"></i></div>
+                                        <div class="timeline-text">
+                                          <h6>Salesforce Virtual Internship</h6>
+                                          <p><B>Through Online</B></p>
+                                          <p> During the 8 Weeks period of Virtual Internship (November
+                                            2023 - January 2024 ), Logesh N has completed the following:  <br>
+                                            Salesforce Trailhead modules <br>
+                                            Salesforce Fundamentals <br>
+                                            Organizational Setup <br>
+                                            Relationship & Process Automation <br>
+                                            Types Of Flows & Security <br>
+                                            Apex, Testing & Debugging <br>
+                                            VS Code Setup & CLI Setup <br>
+                                            Lightning Web Components (LWC) & API <br>
+                                            Super Badge - Apex Specialist <br>
+                                            Super Badge - Process Automation Specialist <br>
+                                            Super Badge - Developer Super Set</p>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                        
+                       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+      </section>
+
+
+      <div>
+        <h2 id="contact-form" style=" text-align: center;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">STAY CONNECTED</h2>
+      </div>
+      <main>
+        
+        <div class="contact-container">
+            <form  action="https://formspree.io/f/mldgobqd"
+            method="POST">
+                <h2>Say HI</h2>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="contact-info-address">
+                <div class="footer-contact-address">
+                    <h5>Contact Address</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> Ramayeepatty, Namakkal</p>
+                    <p><i class="fas fa-phone-alt"></i> +91 7339055427</p>
+                    <p><i class="fas fa-envelope"></i> logeshnalliyappan@gmail.com</p>
+                </div>
+                <div class="footer-social-media">
+                    <h5>Social Media</h5>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/logesh_sk_0108?igsh=MW82NTh0NGF2MzR4Yw==" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/Logesh0108" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/logeshnalliyappan/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://wa.me/7339055427?text=Hi" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 | All Rights Reserved | Designed and Developed by <span class="developer">Logesh.</span></p>
+    </footer>
+    
+   <!-- Back-to-Top Button -->
+   <div id="back-to-top">
+    <i class="fas fa-chevron-up icon"></i>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    //download button ripple effect anmation
+    function downloadResume(event) {
+        let button = event.target;
+
+        // Create Ripple Effect
+        let ripple = document.createElement("span");
+        ripple.classList.add("ripple");
+        let rect = button.getBoundingClientRect();
+        ripple.style.width = ripple.style.height = Math.max(rect.width, rect.height) + "px";
+        ripple.style.left = event.clientX - rect.left + "px";
+        ripple.style.top = event.clientY - rect.top + "px";
+        button.appendChild(ripple);
+
+        setTimeout(() => {
+            ripple.remove();
+        }, 600);
+
+        // Resume Download
+        let link = document.createElement("a");
+        link.href = "src/Logesh N CV.pdf"; // Change to actual file path
+        link.download = "Logesh_N_Resume.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+
+    // profileimage animation 
+    const profileImg = document.getElementById('profile-img');
+    let timeout;
+
+    profileImg.addEventListener('mousemove', (e) => {
+        clearTimeout(timeout);
+        let xAxis = (window.innerWidth / 2 - e.pageX) / 90;
+        let yAxis = (window.innerHeight / 2 - e.pageY) / 80;
+
+        profileImg.style.transform = `perspective(500px) rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+        profileImg.style.transition = 'transform 0.1s ease-out';
+    });
+
+    profileImg.addEventListener('mouseleave', () => {
+        timeout = setTimeout(() => {
+            profileImg.style.transform = 'perspective(500px) rotateY(0deg) rotateX(0deg)';
+            profileImg.style.transition = 'transform 0.5s ease-in-out';
+        }, 100);
+    });
+
+//back to top button
+    document.getElementById("back-to-top").addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Smooth scrolling
+    });
+  });
+
+  // Show the button only when scrolled down
+  window.addEventListener("scroll", function () {
+    const button = document.getElementById("back-to-top");
+    if (window.scrollY > 300) {
+      button.style.display = "flex"; // Show button when scrolled
+    } else {
+      button.style.display = "none"; // Hide button at the top
+    }
+  });
+</script>
+
+</script>
+
+</html>
